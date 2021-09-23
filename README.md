@@ -1,2 +1,15 @@
-# BI_2021_Python
-This repository is created to do homework on the Python course at the Bioinformatics Institute
+# BI_2021_Python homework1
+
+Welcome!
+
+Here you can find a programm nucleic_acids.py to work with nucleic acids. You can use the following commands:
+
+1) transcribe - print the transcribed sequence
+2) reverse - print the reverse sequence
+3) complement - print the complement sequence
+4) reverse complement - print the reverse complement sequence
+5) exit - finish you work with the programm
+
+The programm will ask you to enter the command and then to enter the sequence. If the input is not correct, please, try again.
+
+The programm will work until you enter the command 'exit'
