@@ -16,13 +16,6 @@ def is_rna(x):
             answer = False
     return answer
 
-def is_nucleic_acid(x):    
-    answer = False
-    if is_dna(x):    
-        answer = True
-    elif is_rna(x):    
-        answer = True
-    return answer
 
 # Transcribe
 
@@ -51,9 +44,43 @@ def reverse_complement(x):
     seq = x[::-1]
     complement(seq)
 
+# Count bases
+
+def bases_c(x):    
+    x = x.upper()
+    print('A:', x.count('A'))
+    print('G:', x.count('G'))
+    print('C:', x.count('C'))
+    if is_rna(x):    
+        print('U:', x.count('U'))
+    else:    
+        print('T:', x.count('T'))
+
+# Base content
+
+def base_perc(x):    
+    x = x.upper()
+    n = len(x)
+    print('A:', x.count('A')/n)
+    print('G:', x.count('G')/n)
+    print('C:', x.count('C')/n)
+    if is_rna(x):    
+        print('U:', x.count('U')/n)
+    else:    
+        print('T:', x.count('T')/n)
+
+# gc content
+
+def gc(x):    
+    x = x.upper()
+    g = x.count('G')
+    c = x.count('C')
+    n = len(x)
+    print((g + c)/n)
+
 # the cycle
 
-commands = ['exit', 'transcribe', 'reverse', 'complement', 'reverse complement']
+commands = ['exit', 'transcribe', 'reverse', 'complement', 'reverse complement', 'count bases', 'base content', 'gc content']
 
 while True:    
     command = input('Enter command:')
@@ -78,4 +105,9 @@ while True:
             complement(sequence)
         elif command == 'reverse complement':    
             reverse_complement(sequence)
-
+        elif command == 'count bases':    
+            bases_c(sequence)
+        elif command == 'base content':    
+            base_perc(sequence)
+        elif command == 'gc content':    
+            gc(sequence)
