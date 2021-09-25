@@ -1,7 +1,7 @@
 # Check if the sequence is nucleic acid
 
 def is_dna(x):    
-    bases = ['a', 'c', 't', 'g', 'A', 'C', 'T', 'G']
+    bases = {'a', 'c', 't', 'g', 'A', 'C', 'T', 'G'}
     answer = True
     for i in x:    
         if i not in bases:    
@@ -9,7 +9,7 @@ def is_dna(x):
     return answer
 
 def is_rna(x):    
-    bases = ['a', 'c', 'u', 'g', 'A', 'C', 'U', 'G']
+    bases = {'a', 'c', 'u', 'g', 'A', 'C', 'U', 'G'}
     answer = True
     for i in x:    
         if i not in bases:    
@@ -19,10 +19,21 @@ def is_rna(x):
 
 # Transcribe
 
+def transcribe (x):    
+    dna_to_rna = {'A':'U', 'a':'u', 'T':'A', 't':'a', 'G':'C', 'g':'c', 'C':'G', 'c':'g'}
+    transcript = ''
+    for i in x:    
+        transcript += dna_to_rna[i]
+    print(transcript)
+
+"""
+В примере из задания просто T  заменяется на U, тогда функция должна была выглядеть так, но в итоге я решила использовать другую версию
+
 def transcribe(x):    
     transcript = x.replace('T', 'U')
     transcript = transcript.replace('t', 'u')
     print(transcript)
+"""
 
 # Complement
 
@@ -80,7 +91,7 @@ def gc(x):
 
 # the cycle
 
-commands = ['exit', 'transcribe', 'reverse', 'complement', 'reverse complement', 'count bases', 'base content', 'gc content']
+commands = {'exit', 'transcribe', 'reverse', 'complement', 'reverse complement', 'count bases', 'base content', 'gc content'}
 
 while True:    
     command = input('Enter command:')
