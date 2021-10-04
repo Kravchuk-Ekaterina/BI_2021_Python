@@ -1,7 +1,9 @@
-# BI_2021_Python homework1
+# BI_2021_Python
+This repository is created to do my homework in Bioinformatics Institute
 
 Welcome!
 
+# Homework 1
 Here you can find a programm nucleic_acids.py to work with nucleic acids. You can use the following commands:
 
 1) transcribe - print the transcribed sequence
