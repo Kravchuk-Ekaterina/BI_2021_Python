@@ -2,29 +2,21 @@
 
 def is_dna(x):    
     bases = {'a', 'c', 't', 'g', 'A', 'C', 'T', 'G'}
-    answer = True
-    for i in x:    
-        if i not in bases:    
-            answer = False
-    return answer
+    return set(x) <= bases
 
 def is_rna(x):    
     bases = {'a', 'c', 'u', 'g', 'A', 'C', 'U', 'G'}
-    answer = True
-    for i in x:    
-        if i not in bases:    
-            answer = False
-    return answer
+    return set(x) <= bases
 
 
 # Transcribe
 
 def transcribe (x):    
     dna_to_rna = {'A':'U', 'a':'u', 'T':'A', 't':'a', 'G':'C', 'g':'c', 'C':'G', 'c':'g'}
-    transcript = ''
+    transcript = []
     for i in x:    
-        transcript += dna_to_rna[i]
-    print(transcript)
+        transcript.append(dna_to_rna[i])
+    print("".join(transcript))
 
 """
 В примере из задания просто T  заменяется на U, тогда функция должна была выглядеть так, но в итоге я решила использовать другую версию
@@ -57,7 +49,7 @@ def reverse_complement(x):
 
 # Count bases
 
-def bases_c(x):    
+def bases_count(x):    
     x = x.upper()
     print('A:', x.count('A'))
     print('G:', x.count('G'))
@@ -117,8 +109,14 @@ while True:
         elif command == 'reverse complement':    
             reverse_complement(sequence)
         elif command == 'count bases':    
-            bases_c(sequence)
+            bases_count(sequence)
         elif command == 'base content':    
+            while sequence == '':    
+                print('The input is empty. Try again!')
+                sequence = input('Enter sequence:')
             base_perc(sequence)
-        elif command == 'gc content':    
+        elif command == 'gc content':
+            while sequence == '':    
+                print('The input is empty. Try again!')
+                sequence = input('Enter sequence:')
             gc(sequence)
