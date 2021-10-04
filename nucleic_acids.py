@@ -1,8 +1,10 @@
 # Check if the sequence is nucleic acid
 
+
 def is_dna(x):    
     bases = {'a', 'c', 't', 'g', 'A', 'C', 'T', 'G'}
     return set(x) <= bases
+
 
 def is_rna(x):    
     bases = {'a', 'c', 'u', 'g', 'A', 'C', 'U', 'G'}
@@ -11,13 +13,15 @@ def is_rna(x):
 
 # Transcribe
 
+
 def transcribe (x):    
-    dna_to_rna = {'A':'U', 'a':'u', 'T':'A', 't':'a', 'G':'C', 'g':'c', 'C':'G', 'c':'g'}
+    dna_to_rna = {'A': 'U', 'a': 'u', 'T': 'A', 't': 'a', 'G': 'C', 'g': 'c', 'C': 'G', 'c': 'g'}
     transcript = []
     for i in x:    
         transcript.append(dna_to_rna[i])
     print("".join(transcript))
 
+    
 """
 В примере из задания просто T  заменяется на U, тогда функция должна была выглядеть так, но в итоге я решила использовать другую версию
 
@@ -27,12 +31,13 @@ def transcribe(x):
     print(transcript)
 """
 
+
 # Complement
 
 def complement(x):
     seq = ''
-    dna_pairs = {'A':'T', 'T':'A', 'a':'t', 't':'a', 'G':'C', 'C':'G', 'g':'c', 'c':'g'}
-    rna_pairs = {'A':'U', 'U':'A', 'a':'u', 'u':'a', 'G':'C', 'C':'G', 'g':'c','c':'g'}
+    dna_pairs = {'A': 'T', 'T': 'A', 'a': 't', 't': 'a', 'G': 'C', 'C': 'G', 'g': 'c', 'c': 'g'}
+    rna_pairs = {'A': 'U', 'U': 'A', 'a': 'u', 'u': 'a', 'G': 'C', 'C': 'G', 'g': 'c','c': 'g'}
     if is_dna(x):    
         pairs = dna_pairs
     else:    
@@ -41,13 +46,17 @@ def complement(x):
         seq += pairs[i]
     print(seq)
 
+    
 # Reverse complement
+
 
 def reverse_complement(x):    
     seq = x[::-1]
     complement(seq)
 
+    
 # Count bases
+
 
 def bases_count(x):    
     x = x.upper()
@@ -59,7 +68,9 @@ def bases_count(x):
     else:    
         print('T:', x.count('T'))
 
+        
 # Base content
+
 
 def base_perc(x):    
     x = x.upper()
@@ -72,7 +83,9 @@ def base_perc(x):
     else:    
         print('T:', x.count('T')/n)
 
+        
 # gc content
+
 
 def gc(x):    
     x = x.upper()
@@ -81,7 +94,9 @@ def gc(x):
     n = len(x)
     print((g + c)/n)
 
+    
 # the cycle
+
 
 commands = {'exit', 'transcribe', 'reverse', 'complement', 'reverse complement', 'count bases', 'base content', 'gc content'}
 
