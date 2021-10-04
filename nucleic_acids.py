@@ -1,12 +1,12 @@
 # Check if the sequence is nucleic acid
 
 
-def is_dna(x):    
+def is_dna(x):
     bases = {'a', 'c', 't', 'g', 'A', 'C', 'T', 'G'}
     return set(x) <= bases
 
 
-def is_rna(x):    
+def is_rna(x):
     bases = {'a', 'c', 'u', 'g', 'A', 'C', 'U', 'G'}
     return set(x) <= bases
 
@@ -14,7 +14,7 @@ def is_rna(x):
 # Transcribe
 
 
-def transcribe (x):    
+def transcribe(x):
     dna_to_rna = {'A': 'U', 'a': 'u', 'T': 'A', 't': 'a', 'G': 'C', 'g': 'c', 'C': 'G', 'c': 'g'}
     transcript = []
     for i in x:    
@@ -50,7 +50,7 @@ def complement(x):
 # Reverse complement
 
 
-def reverse_complement(x):    
+def reverse_complement(x):
     seq = x[::-1]
     complement(seq)
 
@@ -58,7 +58,7 @@ def reverse_complement(x):
 # Count bases
 
 
-def bases_count(x):    
+def bases_count(x):
     x = x.upper()
     print('A:', x.count('A'))
     print('G:', x.count('G'))
@@ -72,7 +72,7 @@ def bases_count(x):
 # Base content
 
 
-def base_perc(x):    
+def base_perc(x):
     x = x.upper()
     n = len(x)
     print('A:', x.count('A')/n)
@@ -87,7 +87,7 @@ def base_perc(x):
 # gc content
 
 
-def gc(x):    
+def gc(x):
     x = x.upper()
     g = x.count('G')
     c = x.count('C')
@@ -100,7 +100,7 @@ def gc(x):
 
 commands = {'exit', 'transcribe', 'reverse', 'complement', 'reverse complement', 'count bases', 'base content', 'gc content'}
 
-while True:    
+while True:
     command = input('Enter command:')
     if command == 'exit':    
         print('Good luck')
