@@ -18,3 +18,7 @@ Here you can find a programm nucleic_acids.py to work with nucleic acids. You ca
 The programm will ask you to enter the command and then to enter the sequence. If the input is not correct, please, try again.
 
 The programm will work until you enter the command 'exit'
+
+# Homework 2
+I created the programm units_converter.py and chose radioctivity and ionizing radiation units
+
