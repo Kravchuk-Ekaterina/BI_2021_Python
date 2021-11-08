@@ -1,5 +1,5 @@
 # Numpy homework
-I created numpy_challenge.py which contains 3 arrays created in different ways and the followingfunctions:
+I created numpy_challenge.py which contains 3 arrays created in different ways and the following functions:
 
 1) matrix_multiplication: takes 2 matrices, multiplies them according to the appropriate rules and outputs the resulting matrix
 2) multiplication_check: takes a list of matrices, and returns 'True' if they can be multiplied by each other in the order in which they are in the list, and 'False' if they cannot be multiplied
