@@ -11,12 +11,12 @@ my_first_array = np.array(data) # The first way is making the array from existin
 
 my_second_array = np.full(8, 8) # Creating the array from zero. We get array with 8 eights
 
-my_third_array = np.arrange(1, 10, 2) # We get the array from 1 to 10 with the step 2
+my_third_array = np.arange(1, 10, 2) # We get the array from 1 to 10 with the step 2
 
 # Creating matrix_multiplication
 
 def matrix_multiplication(m1, m2):
-    return np.dot(m1, m2)
+    return m1 @ m2
 
 # Creating multiplication_check
 
@@ -44,11 +44,11 @@ def multiply_matrices(ms):
 
 # Creating compute_2d_distance
 
-def compute_2d_distance(v1, v2):
-    a1 = np.array(v1)
-    a2 = np.array(v2)
+def compute_2d_distance(a, b):
+    a1 = np.array(a)
+    a2 = np.array(b)
     vector = a1 - a2
-    return ((vector[0])**2 + vector[1])**2)**0.5
+    return np.sqrt((vector[0])**2 + (vector[1])**2)
 
 # Creating compute_multidimensional_distance
 
@@ -58,10 +58,10 @@ def compute_multidimensional_distance(v1, v2):
     vector = a1 - a2
     sq = 0
     for i in vector:
-        sq + = i**2
-    return sq**0.5
+        sq = sq + i**2
+    return np.sqrt(sq)
 
 # Creating compute_pair_distances
 
-def compute_pair_distances(m):
-
+def compute_pair_distances(x):
+    return np.sqrt(np.sum((x[None, :] - x[:, None])**2, -1))
