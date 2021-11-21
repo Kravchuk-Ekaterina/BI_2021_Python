@@ -11,8 +11,7 @@ def gc_filter(input_fastq, gc_bounds, save_filtered):
     good_lines = []
     bad_lines = []
     with open(input_fastq) as file:
-        for line in file:
-            lines.append(line)
+        lines = file.readlines()
     i = 1
     if save_filtered is True:
         while i < len(lines) - 4:
