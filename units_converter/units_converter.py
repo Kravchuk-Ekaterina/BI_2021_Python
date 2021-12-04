@@ -1,5 +1,5 @@
 # RADIOACTIVITY UNITS
-rad_units = {'dps': 1, 'dpm': 1, 'Bq':1, 'kBq': 1000, 'MBq': 1000000, 'GBq': 1000000000, 'uCi': 3700, 'mCi': 3700000, 'Ci': 3700000000}
+rad_units = {'dps': 1, 'dpm': 1, 'Bq': 1, 'kBq': 1000, 'MBq': 1000000, 'GBq': 1000000000, 'uCi': 3700, 'mCi': 3700000, 'Ci': 3700000000}
 
 # IONIZING RADIATION UNITS
 
@@ -15,6 +15,7 @@ eq_dose_units = {'Sv': 1, 'Baer': 0.01, 'mSv': 0.001, 'uSv': 0.000001}
 def units_converter(units, n, in_unit, out_unit):
     base = n*units[in_unit]
     print(base/units[out_unit], out_unit)
+
 
 possible_values = {'radioactivity', 'absorbed radiation dose', 'exposure dose', 'equivalent dose'}
 value = input('Choose the physical quantity: radioactivity / absorbed radiation dose / exposure dose / equivalent dose ')
