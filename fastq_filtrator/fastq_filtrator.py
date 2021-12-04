@@ -57,7 +57,6 @@ def length_filter(good_lines, bad_lines, length_bounds, save_filtered):
     if save_filtered is True:
         while i < len(lines) - 4:
             seq = lines[i].upper().strip()
-            gc_content = round(((seq.count('C') + seq.count('G'))/len(seq)*100), 1)
             if min_len <= len(seq) <= max_len:
                 good_lines.append(lines[i-1])
                 good_lines.append(lines[i])
@@ -190,6 +189,6 @@ if input('Whould you like to set quality threshold manually (0 by default), y/n?
 
 save_filtered = False
 if input('Whould you like to save the filtered file? y/n ') == 'y':
-        save_filtered = True
+    save_filtered = True
 
 main(input_fastq, output_file_prefix, gc_bounds, length_bounds, quality_threshold, save_filtered)
