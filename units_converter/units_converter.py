@@ -11,7 +11,6 @@ e_dose_units = {'R': 1, 'mR': 0.001, 'uR': 0.000001}
 
 # Equivalent dose of radiation
 eq_dose_units = {'Sv': 1, 'Baer': 0.01, 'mSv': 0.001, 'uSv': 0.000001}
-
 def units_converter(units, n, in_unit, out_unit):
     base = n*units[in_unit]
     print(base/units[out_unit], out_unit)
