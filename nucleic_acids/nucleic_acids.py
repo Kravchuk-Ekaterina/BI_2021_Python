@@ -22,16 +22,6 @@ def transcribe(x):
     print("".join(transcript))
 
 
-"""
-В примере из задания просто T  заменяется на U, тогда функция должна была выглядеть так, но в итоге я решила использовать другую версию
-
-def transcribe(x):    
-    transcript = x.replace('T', 'U')
-    transcript = transcript.replace('t', 'u')
-    print(transcript)
-"""
-
-
 # Complement
 
 def complement(x):
@@ -68,7 +58,7 @@ def bases_count(x):
     else:
         print('T:', x.count('T'))
 
-        
+
 # Base content
 
 
