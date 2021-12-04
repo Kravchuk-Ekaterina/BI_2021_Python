@@ -17,11 +17,11 @@ def is_rna(x):
 def transcribe(x):
     dna_to_rna = {'A': 'U', 'a': 'u', 'T': 'A', 't': 'a', 'G': 'C', 'g': 'c', 'C': 'G', 'c': 'g'}
     transcript = []
-    for i in x:    
+    for i in x:
         transcript.append(dna_to_rna[i])
     print("".join(transcript))
 
-    
+
 """
 В примере из задания просто T  заменяется на U, тогда функция должна была выглядеть так, но в итоге я решила использовать другую версию
 
@@ -37,12 +37,12 @@ def transcribe(x):
 def complement(x):
     seq = ''
     dna_pairs = {'A': 'T', 'T': 'A', 'a': 't', 't': 'a', 'G': 'C', 'C': 'G', 'g': 'c', 'c': 'g'}
-    rna_pairs = {'A': 'U', 'U': 'A', 'a': 'u', 'u': 'a', 'G': 'C', 'C': 'G', 'g': 'c','c': 'g'}
-    if is_dna(x):    
+    rna_pairs = {'A': 'U', 'U': 'A', 'a': 'u', 'u': 'a', 'G': 'C', 'C': 'G', 'g': 'c', 'c': 'g'}
+    if is_dna(x):
         pairs = dna_pairs
-    else:    
+    else:
         pairs = rna_pairs
-    for i in x:    
+    for i in x:
         seq += pairs[i]
     print(seq)
 
@@ -63,9 +63,9 @@ def bases_count(x):
     print('A:', x.count('A'))
     print('G:', x.count('G'))
     print('C:', x.count('C'))
-    if is_rna(x):    
+    if is_rna(x):
         print('U:', x.count('U'))
-    else:    
+    else:
         print('T:', x.count('T'))
 
         
@@ -102,36 +102,36 @@ commands = {'exit', 'transcribe', 'reverse', 'complement', 'reverse complement',
 
 while True:
     command = input('Enter command:')
-    if command == 'exit':    
+    if command == 'exit':
         print('Good luck')
         break
-    if command not in commands:    
+    if command not in commands:
         print('Try again!')
-    else:   
+    else:
         sequence = input('Enter sequence:')
-        while ((not is_dna(sequence)) and (not is_rna(sequence))):    
+        while ((not is_dna(sequence)) and (not is_rna(sequence))):
             print('Try again!')
             sequence = input('Enter sequence:')
-        if command == 'transcribe':    
-            while not is_dna(sequence):    
+        if command == 'transcribe':
+            while not is_dna(sequence):
                 print('Try again!')
                 sequence = input('Enter sequence:')
             transcribe(sequence)
-        elif command == 'reverse':    
+        elif command == 'reverse':
             print(sequence[::-1])
-        elif command == 'complement':    
+        elif command == 'complement':
             complement(sequence)
-        elif command == 'reverse complement':    
+        elif command == 'reverse complement':
             reverse_complement(sequence)
-        elif command == 'count bases':    
+        elif command == 'count bases':
             bases_count(sequence)
-        elif command == 'base content':    
-            while sequence == '':    
+        elif command == 'base content':
+            while sequence == '':
                 print('The input is empty. Try again!')
                 sequence = input('Enter sequence:')
             base_perc(sequence)
         elif command == 'gc content':
-            while sequence == '':    
+            while sequence == '':
                 print('The input is empty. Try again!')
                 sequence = input('Enter sequence:')
             gc(sequence)
