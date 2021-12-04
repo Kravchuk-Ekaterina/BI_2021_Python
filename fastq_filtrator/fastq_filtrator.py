@@ -38,7 +38,7 @@ def gc_filter(input_fastq, gc_bounds, save_filtered):
                 good_lines.append(lines[i])
                 good_lines.append(lines[i+1])
                 good_lines.append(lines[i+2])
-            i+=4
+            i += 4
         return good_lines
 
 
@@ -120,7 +120,7 @@ def quality_filter(good_lines, bad_lines, quality_threshold, save_filtered):
                 good_lines.append(lines[i-2])
                 good_lines.append(lines[i-1])
                 good_lines.append(lines[i])
-            i +=4
+            i += 4
         return good_lines
 
 
@@ -141,7 +141,7 @@ def file_maker(good_lines, bad_lines, output_file_prefix, save_filtered):
 def main(input_fastq, output_file_prefix, gc_bounds=(0, 100), length_bounds=(0, 2**32), quality_threshold=0, save_filtered=False):
     gc = gc_filter(input_fastq, gc_bounds, save_filtered)
     if save_filtered is True:
-        good_lines =  gc[0]
+        good_lines = gc[0]
         bad_lines = gc[1]
         length = length_filter(good_lines, bad_lines, length_bounds, save_filtered)
         new_good_lines = length[0]
@@ -168,7 +168,7 @@ output_file_prefix = input('Enter the prefix for output file(s), without .fastq 
 
 gc_bounds = (0, 100)
 if input('Whould you like to set gc bounds manually ((0, 100) by default), y/n? ') == 'y':
-    if input('Whould you like to set minimum gc content? y/n ') =='y':
+    if input('Whould you like to set minimum gc content? y/n ') == 'y':
         min_gc = int(input('Enter minimum gc content: '))
         max_gc = int(input('Enter maximum gc content: '))
         gc_bounds = (min_gc, max_gc)
@@ -177,7 +177,7 @@ if input('Whould you like to set gc bounds manually ((0, 100) by default), y/n? 
 
 length_bounds = (0, 2**32)
 if input('Whould you like to set length bounds manually ((0, 2**32) by default), y/n? ') == 'y':
-    if input('Whould you like to set minimum length? y/n ') =='y':
+    if input('Whould you like to set minimum length? y/n ') == 'y':
         min_len = int(input('Enter minimum length: '))
         max_len = int(input('Enter maximum length: '))
         length_bounds = (min_len, max_len)
@@ -193,4 +193,3 @@ if input('Whould you like to save the filtered file? y/n ') == 'y':
         save_filtered = True
 
 main(input_fastq, output_file_prefix, gc_bounds, length_bounds, quality_threshold, save_filtered)
-
