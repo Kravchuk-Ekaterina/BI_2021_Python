@@ -154,4 +154,34 @@ The output:<br>
 16<br>
 3<br>
 some text<br>
+#### rm.py
+the utility is rm analogue <br>
+to use is start the command with ./rm.py <br>
+Use the following command to get the help message:
+```bash
+./rm.py -h
+```
+or
+```bash
+./rm.py --help
+```
+Here is the help message:
+```bash
+
+```
+Some examples of usage (the used data you can find in ./test_data/Test_for_sort/):
+```bash
+./rm.py test_file test_dir imagination.txt
+```
+The output:<br>
+It is impossible to remove test_dir. It is a directory.<br>
+You tried to remove imagination.txt. It is impossible. There is no such file or directory.<br>
+test_file is removed
+```bash
+./rm.py -r test_file test_dir imagination.txt
+```
+The output:<br>
+You tried to remove test_file. It is impossible. There is no such file or directory.<br>
+You tried to remove imagination.txt. It is impossible. There is no such file or directory.<br>
+test_dir is removed
 
