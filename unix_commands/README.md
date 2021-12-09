@@ -5,7 +5,8 @@ Each program is in a separate script, which are named by the template utility_na
 Like the reference utilities, these utilities are able to accept an argument or stream as input.<br>
 The utilities are able to work in pipelines with each other and with UNIX utilities.<br>
 I implemented: <br>
-1) wc.py which mimics wc with options -l -w- c <br>
+1) wc.py which mimics wc with options -l -w -c <br>
+2) ls.py which mimics ls with option -a <br>
 
 ## Usage
 ### 1) Create and activate a virtual environment and use the python interpreter from the currently active environment
@@ -69,4 +70,39 @@ head ./test_data/test.fastq | ./wc.py -l
 ```
 The output:<br>
 10
+#### ls.py
+the utility is ls analogue <br>
+to use is start the command with ./ls.py <br>
+Use the following command to get the help message:
+```bash
+./ls.py -h
+```
+or
+```bash
+./ls.py --help
+```
+Here is the help message:
+```bash
+usage: ls.py [-h] [-a] [PATH]
+
+ls analogue
+
+positional arguments:
+  PATH
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -a, --all   Do not hide files starting with .
+```
+Some examples of usage:
+```bash
+./ls.py ../
+```
+The output:<br>
+fastq_filtrator virtual_environment numpy_challenge unix_commands README.md units_converter nucleic_acids
+```bash
+./ls.py -a
+```
+The output:<br>
+ls.py .test README.md wc.py test_data
 
