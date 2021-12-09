@@ -10,6 +10,7 @@ I implemented: <br>
 3) sort.py which mimics sort <br>
 4) rm.py which mimics rm with option -r<br>
 5) cat.py which mimics cat<br>
+6) head.py which mimics head with option -n <br>
 
 ## Usage
 ### 1) Create and activate a virtual environment and use the python interpreter from the currently active environment
@@ -240,4 +241,99 @@ The output:<br>:
 @SRR1363257.37 GWZHISEQ01:153:C1W31ACXX:5:1101:14027:2198 length=101<br>
 GGTTGCAGATTCGCAGTGTCGCTGTTCCAGCGCATCACATCTTTGATGTTCACGCCGTGGCGTTTAGCAATGCTTGAAAGCGAATCGCCTTTGCCCACACG<br>
 +<br>
+#### head.py
+the utility is head analogue <br>
+to use is start the command with ./head.py <br>
+Use the following command to get the help message:
+```bash
+./head.py -h
+```
+or
+```bash
+./head.py --help
+```
+Here is the help message:
+```bash
+usage: head.py [-h] [-n LINES_NUMBER] [DATA ...]
+
+head analogue
+
+positional arguments:
+  DATA
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n LINES_NUMBER, --lines_number LINES_NUMBER
+                        print K lines of each file, not the first 10, if K is preceded by "-",
+                        print everything except K
+```
+Some examples of usage:
+```bash
+./head.py -n -1823500 ./test_data/test.fastq
+```
+The output:<br>
+@SRR1363257.37 GWZHISEQ01:153:C1W31ACXX:5:1101:14027:2198 length=101<br>
+GGTTGCAGATTCGCAGTGTCGCTGTTCCAGCGCATCACATCTTTGATGTTCACGCCGTGGCGTTTAGCAATGCTTGAAAGCGAATCGCCTTTGCCCACACG<br>
++<br>
+@?:=:;DBFADH;CAECEE@@E:FFHGAE4?C?DE<BFGEC>?>FHE4BFFIIFHIBABEECA83;>>@>@CCCDC9@@CC08<@?@BB@9:CC#######<br>
+```bash
+cat ./test_data/test.fastq | ./head.py
+```
+The output:<br>
+@SRR1363257.37 GWZHISEQ01:153:C1W31ACXX:5:1101:14027:2198 length=101<br>
+GGTTGCAGATTCGCAGTGTCGCTGTTCCAGCGCATCACATCTTTGATGTTCACGCCGTGGCGTTTAGCAATGCTTGAAAGCGAATCGCCTTTGCCCACACG<br>
++<br>
+@?:=:;DBFADH;CAECEE@@E:FFHGAE4?C?DEBFGEC?FHE4BFFIIFHIBABEECA83;>>@>@CCCDC9@@CC08<@?@BB@9:CC#######<br>
+@SRR1363257.46 GWZHISEQ01:153:C1W31ACXX:5:1101:19721:2155 length=101<br>
+GTATGAGGTTTTGCTGCATTCTCTGNGCGAATATTAACTCCNTNNNNNTTATAGTTCAAAGCAAGTACCTGTCTCTTATACACATCTCCGAGCCCACGAGC<br>
++<br>
+@@<?=D?D==?AFGDF+AIHEACH#22:?E8??:9??GG#0#####000;CF=C)4.==CA@@@)=7?C7?E37;3@;;(.;AB#############<br>
+@SRR1363257.77 GWZHISEQ01:153:C1W31ACXX:5:1101:5069:2307 length=101<br>
+GCTTCTCTTAACTGAGGTCACCATCATGCCGTTAAGTCCCTACCTCTCTTTTGCCGGTAACTGTTCCGCCGCGATTGCCTTTTATCTGTCTCTTATACACC<br>
+#### tail.py
+the utility is tail analogue <br>
+to use is start the command with ./tail.py <br>
+Use the following command to get the help message:
+```bash
+./tail.py -h
+```
+or
+```bash
+./tail.py --help
+```
+Here is the help message:
+```bash
+usage: tail.py [-h] [-n LINES_NUMBER] [DATA ...]
+
+tail analogue
+
+positional arguments:
+  DATA
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n LINES_NUMBER, --lines_number LINES_NUMBER
+                        Display the last H lines, not the last 10 or use -n + H to output
+                        starting with H
+```
+Some examples of usage (you can find the used data in ./test_data/lines.txt):
+```bash
+./tail.py -n 4 ./test_data/line.txt
+```
+The output:<br>
+line7<br>
+line8<br>
+line9<br>
+line10<br>
+```bash
+cat ./test_data/line.txt | ./tail.py -n +4
+```
+The output:<br>
+line4<br>
+line5<br>
+line6<br>
+line7<br>
+line8<br>
+line9<br>
+line10<br>
 
