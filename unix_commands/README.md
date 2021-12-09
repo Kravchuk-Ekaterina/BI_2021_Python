@@ -8,6 +8,8 @@ I implemented: <br>
 1) wc.py which mimics wc with options -l -w -c <br>
 2) ls.py which mimics ls with option -a <br>
 3) sort.py which mimics sort <br>
+4) rm.py which mimics rm with option -r<br>
+5) cat.py which mimics cat<br>
 
 ## Usage
 ### 1) Create and activate a virtual environment and use the python interpreter from the currently active environment
@@ -167,7 +169,16 @@ or
 ```
 Here is the help message:
 ```bash
+usage: rm.py [-h] [-r] [PATH ...]
 
+rm analogue
+
+positional arguments:
+  PATH
+
+optional arguments:
+  -h, --help           show this help message and exit
+  -r, -R, --recursive  Recursively delete directories and their contents
 ```
 Some examples of usage (the used data you can find in ./test_data/Test_for_sort/):
 ```bash
@@ -184,4 +195,49 @@ The output:<br>
 You tried to remove test_file. It is impossible. There is no such file or directory.<br>
 You tried to remove imagination.txt. It is impossible. There is no such file or directory.<br>
 test_dir is removed
+#### cat.py
+the utility is cat analogue <br>
+to use is start the command with ./cat.py <br>
+Use the following command to get the help message:
+```bash
+./cat.py -h
+```
+or
+```bash
+./cat.py --help
+```
+Here is the help message:
+```bash
+usage: cat.py [-h] [DATA ...]
+
+cat analogue
+
+positional arguments:
+  DATA
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+Some examples of usage (the used data you can find in ./test_data/Test_for_sort/):
+```bash
+./cat.py ./test_data/test_for_sort/file1.txt ./test_data/test_for_sort/file2.txt
+```
+The output:<br>
+1<br>
+3<br>
+16<br>
+<br>
+some text<br>
+2<br>
+8<br>
+another text<br>
+<br>
+more text<br>
+```bash
+head ./test_data/test.fastq | ./cat.py
+```
+The output:<br>:
+@SRR1363257.37 GWZHISEQ01:153:C1W31ACXX:5:1101:14027:2198 length=101<br>
+GGTTGCAGATTCGCAGTGTCGCTGTTCCAGCGCATCACATCTTTGATGTTCACGCCGTGGCGTTTAGCAATGCTTGAAAGCGAATCGCCTTTGCCCACACG<br>
++<br>
 
