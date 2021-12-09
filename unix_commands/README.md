@@ -7,6 +7,7 @@ The utilities are able to work in pipelines with each other and with UNIX utilit
 I implemented: <br>
 1) wc.py which mimics wc with options -l -w -c <br>
 2) ls.py which mimics ls with option -a <br>
+3) sort.py which mimics sort <br>
 
 ## Usage
 ### 1) Create and activate a virtual environment and use the python interpreter from the currently active environment
@@ -105,4 +106,52 @@ fastq_filtrator virtual_environment numpy_challenge unix_commands README.md unit
 ```
 The output:<br>
 ls.py .test README.md wc.py test_data
+#### sort.py
+the utility is sort analogue <br>
+to use is start the command with ./sort.py <br>
+Use the following command to get the help message:
+```bash
+./sort.py -h
+```
+or
+```bash
+./sort.py --help
+```
+Here is the help message:
+```bash
+usage: sort.py [-h] [DATA ...]
+
+sort analogue
+
+positional arguments:
+  DATA
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+Some examples of usage (the used data you can find in ./test_data/Test_for_sort/):
+```bash
+./sort.py ./test_data/test_for_sort/file1.txt ./test_data/test_for_sort/file2.txt ./test_data/test_for_sort/new_file.txt
+```
+The output:<br>
+<br>
+<br>
+1<br>
+16<br>
+2<br>
+3<br>
+8<br>
+another text<br>
+more text<br>
+new_text<br>
+some text<br>
+```bash
+cat ./test_data/test_for_sort/file1.txt | ./sort.py
+```
+The output:<br>
+<br>
+1<br>
+16<br>
+3<br>
+some text<br>
 

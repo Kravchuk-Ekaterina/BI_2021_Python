@@ -2,7 +2,6 @@
 
 # Importing packages
 import argparse
-import sys
 import os
 
 # Parsing arguments
