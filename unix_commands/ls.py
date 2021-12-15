@@ -18,7 +18,7 @@ files = os.listdir(my_path)
 files_no_dot = []
 
 if args.all:
-    print(' '.join(files))
+    print('\n'.join(files))
 else:
     for f in files:
         if f[0] != '.':
