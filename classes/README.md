@@ -12,4 +12,6 @@ Created a class describing RNA which:
  - Gets the RNA sequence and creates an object with it
  - Has the methon translation to get the protein using the genetic code
  - Has the method reverse_transcription to get the complementary DNA sequence
-
+<br>
+## Task 3
+I wrote a class, inheriting from sets, which contains only positive numbers when created and will not add non-positive elements
