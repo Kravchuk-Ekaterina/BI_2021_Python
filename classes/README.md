@@ -15,3 +15,15 @@ Created a class describing RNA which:
 <br>
 ## Task 3
 I wrote a class, inheriting from sets, which contains only positive numbers when created and will not add non-positive elements
+<br>
+## Task 4
+Creating class for collecting statistics on .fasta.<br>
+### Input parameters:<br>
+- Path to .fasta file<br>
+### Methods:
+- Counting the number of sequences in a .fasta file<br>
+- Building a histogram of sequence lengths<br>
+- Calculation of GC-content<br>
+- Building a histogram of the frequency of k-mers (on the x-axis each of the possible k-mers, and on the y-axis - their frequency). Additionaly: building a histogram of the frequency of 4-mers<br>
+- Override method for printing information (enough text indicating the path to the file)<br>
+- Execution of all used methods for calculating metrics<br>
