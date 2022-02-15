@@ -6,20 +6,17 @@ Created class Snail describing snails :3 <br>
  - Method size_group gives you the size group of the snail using the information stired in size. There are 3 size groups: small, medium and large.<br>
  - Method growth helps to increase the snail's size.<br>
  - Method greet shows you the snail's greeting.<br>
-<br>
 ## Task 2
 Created a class describing RNA which:
  - Gets the RNA sequence and creates an object with it
  - Has the methon translation to get the protein using the genetic code
  - Has the method reverse_transcription to get the complementary DNA sequence
-<br>
 ## Task 3
 I wrote a class, inheriting from sets, which contains only positive numbers when created and will not add non-positive elements
-<br>
 ## Task 4
-Creating class for collecting statistics on .fasta.<br>
-### Input parameters:<br>
-- Path to .fasta file<br>
+Creating class for collecting statistics on .fasta.
+### Input parameters:
+- Path to .fasta file
 ### Methods:
 - Counting the number of sequences in a .fasta file<br>
 - Building a histogram of sequence lengths<br>
