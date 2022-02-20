@@ -8,3 +8,7 @@ Selecting the required data:<br>
 - Rows where matches are greater than the mean <br>
 - Columns pos, reads_all, mismatches, deletions, insertions <br>
 
+## Task 3
+The task is to perform EDA<br>
+Conducting an Explorative Data Analysis of some dataset. I chosed IrisData
+
