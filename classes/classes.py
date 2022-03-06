@@ -66,14 +66,13 @@ class RNA:
 
 class PositiveSet(set):
     def __init__(self, *args):
-        self.set = set()
-        for arg in args:
-            if arg > 0:
-                self.set.add(arg)
+        set_ = [arg for arg in args if arg > 0]
+        super().__init__(set_)
+
     def add(self, *args):
         for arg in args:
             if arg > 0:
-                self.set.add(arg)
+                super().add(arg)
 
 # Task 4
 
