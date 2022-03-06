@@ -10,11 +10,11 @@ class Snail:
 
     def age_group(self):
         if self.age <= 15:
-            print('young')
+            return 'young'
         elif self.age <= 60:
-            print('adult')
+            return 'adult'
         else:
-            print('old')
+            return 'old'
 
     def size_group(self):
         if self.size <= 20:
