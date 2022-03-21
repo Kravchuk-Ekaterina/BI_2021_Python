@@ -1,0 +1,57 @@
+
+<head><title>GENSCAN Output</title>
+<style type="text/css">
+hr {color:darkblue}
+p {margin-left:20px}
+body {font-family: helvetica, arial}
+blockquote { border: 5px solid black; padding: 5px 5px 5px}
+</style>
+</head>
+<body BGCOLOR="#00336677" link="#FFFF00" vlink="#77FFFF77" alink="#FFFF00" text="#FFFFFF">
+
+<!--: spam
+Content-Type: text/html
+
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> -->
+<body bgcolor="#f0f0f8"><font color="#f0f0f8" size="-5"> --> -->
+</font> </font> </font> </script> </object> </blockquote> </pre>
+</table> </table> </table> </table> </table> </font> </font> </font><body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>&lt;type 'exceptions.TypeError'&gt;</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 2.5.2: /usr/bin/python<br>Wed Mar  9 14:26:09 2022</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file:///home/website/cgi-bin/genscanw_py.cgi">/home/website/cgi-bin/genscanw_py.cgi</a> in <strong><module></strong>()</td></tr>
+<tr><td><font color="#909090"><tt><small>&nbsp;&nbsp;&nbsp;69</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt><small>&nbsp;&nbsp;&nbsp;70</small>&nbsp;#&nbsp;Generate&nbsp;PS&nbsp;file<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt><small>&nbsp;&nbsp;&nbsp;71</small>&nbsp;genscan_cmdline&nbsp;+=&nbsp;'&nbsp;-ps&nbsp;%s'&nbsp;%(temp_ps)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt><small>&nbsp;&nbsp;&nbsp;72</small>&nbsp;#&nbsp;Handle&nbsp;subopt&nbsp;option<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt><small>&nbsp;&nbsp;&nbsp;73</small>&nbsp;genscan_cmdline&nbsp;+=&nbsp;'&nbsp;-subopt&nbsp;%d'&nbsp;%(subopt)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><strong>genscan_cmdline</strong>&nbsp;= None, <strong>temp_ps</strong>&nbsp;= '/tmp/03_09_22-14:26:09.ps'</font></small></td></tr></table><p><strong>&lt;type 'exceptions.TypeError'&gt;</strong>: unsupported operand type(s) for +=: 'NoneType' and 'str'
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+("unsupported operand type(s) for +=: 'NoneType' and 'str'",)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>message&nbsp;=
+"unsupported operand type(s) for +=: 'NoneType' and 'str'"
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "/home/website/cgi-bin/genscanw_py.cgi", line 71, in &lt;module&gt;
+    genscan_cmdline += ' -ps %s' %(temp_ps)
+TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+
+-->
+
